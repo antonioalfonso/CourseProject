@@ -14,21 +14,22 @@ Otherwise, use the ClassificationCompetition_BERT_AntonioGomez.ipynb I recommend
 but I assume any good Python editor would do the work.
 
 At the final stage of your project, you need to deliver the following:
-0) What's included in this submission?
 
-0.1) This file includes details on what needs to be setup.
-0.2) The reference to Google Colab (above) as well as the .ipynb file contain the commented
+1) What's included in this submission?
+
+1.1) This file includes details on what needs to be setup.
+1.2) The reference to Google Colab (above) as well as the .ipynb file contain the commented
 source code.
-0.3) answer.txt contains the test set predictions (as required in https://docs.google.com/document/d/13ANy7FHYovh_2JL3gVrVvzXScDh5ol5l5XS2Nlp4DN4/edit)
+1.3) answer.txt contains the test set predictions (as required in https://docs.google.com/document/d/13ANy7FHYovh_2JL3gVrVvzXScDh5ol5l5XS2Nlp4DN4/edit)
 
 
-1) What is required to run this model?
+2) What is required to run this model?
 
 In both cases you need to have the files train.jsonl, and test.jsonl ready to be loaded.
 
-1.1) If you want to use the Google Colab instance, you should:
-	1.1.1) mount your google drive (assumes you have a gmail or otherwise google-compatible account)
-	1.1.2) upload the train.jsonl and test.jsonl at the root of your drive
+2.1) If you want to use the Google Colab instance, you should:
+	2.1.1) mount your google drive (assumes you have a gmail or otherwise google-compatible account)
+	2.1.2) upload the train.jsonl and test.jsonl at the root of your drive
 
 As you run the code, you might get the following message:
 
@@ -38,26 +39,26 @@ with Google, or read data and credentials from other sessions. Please review the
 before executing this notebook. Please contact the creator of this notebook at aalfonzo@gmail.com 
 with any additional questions."
 
-1.2)If you want to use the local run instance, you should:
-	1.2.1) From the folder you are running the .ipynb file, you should have a /data folder, in which
+2.2)If you want to use the local run instance, you should:
+	2.2.1) From the folder you are running the .ipynb file, you should have a /data folder, in which
 	you will place both the train.jsonl and the test.jsonl files.
 
-2) About the workbooks:
+3) About the workbooks:
 
-2.1) Both workbooks (ipynb) have cell-by-cell runs with my comments on the code explaning either what the
+3.1) Both workbooks (ipynb) have cell-by-cell runs with my comments on the code explaning either what the
 code does or why did I choose specific parameter values.
 
 -Remember that the local run instance will train much more slowly (it can take you many hours to get
 to the trained model). For instance, in my laptop it took roughly 35 minutes per epoch, so 35x3=105 minutes,
 a little bit less than two hours to have the model trained.
 
-3) Please note that:
+4) Please note that:
 
-3.1) The final design, fine-tuning and training of the network, including number of nodes, size of input,
+4.1) The final design, fine-tuning and training of the network, including number of nodes, size of input,
 batch-size, dropout rates, which optimizer and learning rate to use were all of my authorship after several
 tests being performed.
 
-3.2) Having said that, when it comes to the Neural Network solution I am presenting, I got inspired by two
+4.2) Having said that, when it comes to the Neural Network solution I am presenting, I got inspired by two
 other projects I found in Kaggle, and that I am referencing here:
 
 [A] Sarcasm detection using BERT (92% accuracy), by Raghav Khemka. 
@@ -69,7 +70,7 @@ https://www.kaggle.com/carmensandiego/sarcasm-detection-with-bert-val-accuracy-9
 [C] https://arxiv.org/pdf/1810.04805.pdf
 To get information about best optimizers and learning rates to use for BERT
 
-3.3) How did I arrive to the succesful model?
+4.3) How did I arrive to the succesful model?
 
 Background: Important to note, in the course of the project I have worked with different 
 pre-defined packages (and data transformations), that I am not including here for the sake of
@@ -132,21 +133,21 @@ the stopwords and special punctuation symbols.
 from BERT (512 bytes). I ended up with an input of 64 and batch size of 8, but I equally beat the baseline
 with input size of 128 and batch size of 4.
 
-4) Other important details about this implementation:
+5) Other important details about this implementation:
 
 Throughout the workbook you will find comments that seek to justify my choices many of the parameters
 and fine-tuning completed. The most important things to know are:
 
-4.1) The model worked best when running only for 3 epochs, given my selection of optimizer and learning rate.
+5.1) The model worked best when running only for 3 epochs, given my selection of optimizer and learning rate.
 
-4.2) I had to dropout roughly 40% of the nodes (according to literature I consulted it is considered normal 
+5.2) I had to dropout roughly 40% of the nodes (according to literature I consulted it is considered normal 
 to do dropouts between 20% and 50%. This was the case because I was getting overfitting on the training data 
 already in the third epoch (which indicates that maybe my network was too big to begin with...).
 
-4.3) I tried multiple times to provide a saved model so that you could run the network the same way I did, however
+5.3) I tried multiple times to provide a saved model so that you could run the network the same way I did, however
 for unknown reasons, even though I was able to succesfully save my models, I was not able to load them back again.
 
-4.4) As a consequence of 4.3), it is likely that a run of the model as it is might not render results that beat the 
+5.4) As a consequence of 5.3), it is likely that a run of the model as it is might not render results that beat the 
 baseline, (because is dependent on the training), so take that into consideration as you do the peer-review or
 assessment.
 
