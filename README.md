@@ -14,8 +14,9 @@ available on the link below:
 
 https://colab.research.google.com/drive/1kEjXNHX-tHkjG38BJtw9ol2QH67lGXaG?usp=sharing
 
-Otherwise, use the ClassificationCompetition_BERT_AntonioGomez.ipynb I recommend using Jupyter,
-but I assume any good Python editor would do the work.
+Otherwise, use the ClassificationCompetition_BERT_AntonioGomez.ipynb and run it locally. I recommend 
+using Jupyter, but I assume any good Python editor would do the work. Check 2) to make sure you have
+both train.jsonl and test.jsonl files in the right directory.
 
 At the final stage of your project, you need to deliver the following:
 
