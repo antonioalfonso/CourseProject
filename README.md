@@ -5,6 +5,9 @@ This model was built using Neural Networks, as a consequence the training time
 can vary significantly depending on whether you train in a local environment 
 (e.g. your computer), or GPUs (e.g. Google Colab)
 
+You can find the tutorial here (I show it running Colab and beat the baseline live :-))
+https://www.youtube.com/watch?v=p1T-ekliduA
+
 If you want to run it using Colab, there is a read-only version of the notebook
 available on the link below:
 
