@@ -18,8 +18,6 @@ Otherwise, use the ClassificationCompetition_BERT_AntonioGomez.ipynb and run it 
 using Jupyter, but I assume any good Python editor would do the work. Check 2) to make sure you have
 both train.jsonl and test.jsonl files in the right directory.
 
-At the final stage of your project, you need to deliver the following:
-
 1) What's included in this submission?
 
 1.1) This file includes details on what needs to be setup.
